@@ -1,0 +1,34 @@
+<!ELEMENT circuito (tramo+)>
+<!ELEMENT tramo (distanciaTramo, coordenada, numeroSector)>
+<!ELEMENT distanciaTramo EMPTY>
+<!ELEMENT coordenada EMPTY>
+<!ELEMENT numeroSector (#PCDATA)>
+
+<!ELEMENT circuitoInfo (nombre,longitudCircuito,anchuraMedia,
+fechaCarrera, horaInicioEspañola, numeroVueltas, localidad,
+pais, referecias ,fotografias,videos, circuito)>
+
+<!ELEMENT referecias (referencia+)>
+<!ELEMENT referencia (#PCDATA)>
+<!ELEMENT fotografias (foto+)>
+<!ELEMENT foto (#PCDATA)>
+<!ELEMENT videos (video*)>
+<!ELEMENT video (#PCDATA)>
+<!ELEMENT nombre (#PCDATA)>
+<!ELEMENT longitudCircuito (#PCDATA)>
+<!ELEMENT anchuraMedia (#PCDATA)>
+<!ELEMENT fechaCarrera (#PCDATA)>
+<!ELEMENT numeroVueltas (#PCDATA)>
+<!ELEMENT horaInicioEspañola (#PCDATA)>
+<!ELEMENT localidad (#PCDATA)>
+<!ELEMENT pais (#PCDATA)>
+
+<!ATTLIST coordenada
+    longitud CDATA #REQUIRED
+    latitud CDATA #REQUIRED
+    altitud CDATA #REQUIRED   
+>
+<!ATTLIST distanciaTramo 
+    distancia CDATA #REQUIRED
+    unidades CDATA #REQUIRED
+>
